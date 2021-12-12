@@ -53,8 +53,15 @@ fn main() {
     /*
      * Just like other programming languages, a Boolean type in Rust has two possible values: true and false.
      * Booleans are one byte in size.
-     * We can define booleans using the bool keyword.
+     * We can define booleans using the bool keyword, or directly setting a true/false value.
      */
-    let is_active: bool = true;
+    let is_registered = true;
+    let is_active: bool = false;
+    println!("Is the user registered: {}", is_registered);
     println!("Is the user active: {}", is_active);
+
+    // ========= TUPLES =========
+    /*
+     * Coming soon...
+     */
 }
