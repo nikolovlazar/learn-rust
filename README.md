@@ -6,7 +6,7 @@ Welcome to my "Learning Rust" repo, a home for my notes as I'm learning [Rust](h
 
 My main learning resource is [The Rust Programming Language Book](https://doc.rust-lang.org/book).
 
-So poke around the repo and have fun! If you see a typo, or have a better example in mind, feel free to open a PR 🙏!
+So poke around the repo and have fun! If you see a typo, or have a better example in mind, feel free to open a PR.
 
 > P.S. This could turn into a workshop! Hit me up on [Twitter](https://twitter.com/NikolovLazar) if you're interested!
 
