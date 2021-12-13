@@ -2,7 +2,7 @@
 
 Hello friend! 👋
 
-Welcome to my "Learning Rust" repo, a home for my notes as I'm learning [Rust](https://rust-lang.org). I'm structuring everything into lessons, which can be found in `lessons`. Each lesson is its own cargo project, so you can `cd` into it and run it by executig `cargo run` in your terminal. To start learning, open the `src/main.rs` file in each lesson.
+Welcome to my "Learning Rust" repo, a home for my notes as I'm learning [Rust](https://rust-lang.org). I'm structuring everything into lessons, which can be found in `lessons` directory. Each lesson is its own cargo project, so you can `cd` into it and run it by executing `cargo run` in your terminal. To start learning, open the `src/main.rs` file in each lesson.
 
 I'm explaining the concepts with comments, followed by an example code block. All of the lessons are runabale, so you can clone this repo and play around with the examples. Make sure you pull from this repo from time to time to get the new lessons as I'm publishing them.
 
