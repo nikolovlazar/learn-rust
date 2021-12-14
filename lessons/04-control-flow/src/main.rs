@@ -128,10 +128,10 @@ fn main() {
         loop {
             println!("remaining = {}", remaining);
             if remaining == 9 {
-                break; // will break out of the unlabeled loop (line 116)
+                break; // will break out of the unlabeled loop (line 128)
             }
             if count == 2 {
-                break 'counting_up; // will break out of the labeled counting_up loop (line 112)
+                break 'counting_up; // will break out of the labeled counting_up loop (line 124)
             }
             remaining -= 1;
         }
@@ -142,4 +142,94 @@ fn main() {
     println!("End count = {}", count);
 
     println!("========================");
+
+    /*
+     * Loops can also return values. To do that, we can assign the loop to a new variable, and return the result after the break.
+     */
+    let mut count = 0;
+
+    let result = loop {
+        count += 1;
+
+        if count == 10 {
+            break count * 2;
+        }
+    };
+
+    println!("The result of the loop is: {}", result);
+
+    println!("========================");
+
+    /*
+     * Another type of loops that we mentioned was the while loop.
+     * While loops are just like the ordinary loops, with the difference of having a condition.
+     * So while that condition is true, the while loop's code will repeat.
+     * While loops can be easily achieved using the ordinary loop, if, else and break.
+     * But since this pattern is pretty common, Rust has a built-in language construct for it.
+     * It's much more cleaner than constructing it with loop, if, else and break.
+     * Note that while loops cannot return a value like the ordinary loops.
+     */
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{}!", number);
+        number -= 1;
+    }
+
+    println!("LIFTOFF!");
+
+    println!("========================");
+
+    /*
+     * The third type of loops that we mentioned was the for loop.
+     * The for loop is useful when we want to iterate through every element in an array.
+     * Technically, you can achieve that with a while loop too. Here's an example:
+     *    let a = [10, 20, 30, 40, 50];
+     *    let mut index = 0;
+     *
+     *    while index < 5 {
+     *        println!("the value is: {}", a[index]);
+     *        index += 1;
+     *    }
+     *
+     * The problem with this is the dependency of the index.
+     * If you were to change the array to only have 4 items and forgot to update the while condition,
+     * your program will panic. It will throw an "index out of bounds" error.
+     * It's also slower, because the compiler adds runtime code to check if the condition is still valid.
+     *
+     * Using a for loop in cases like these is the more clever, and more safer way.
+     * Let's rewrite the loop above using a for loop:
+     */
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a {
+        println!("the value is: {}", element);
+    }
+
+    /*
+     * As you can see, the code is much cleaner than the while loop.
+     * Even if we changed the array's size, the loop will still work without having to make any changes to it too. Try it out!
+     */
+
+    println!("========================");
+
+    /*
+     * The safety and conciseness the for loops makes them one of the most used loops in Rust.
+     * We can use it even in situations where we don't neccesarily want to loop through an array, but to simply execute a block
+     * a certain number of times.
+     * We can achieve that by using a Range, which is a type provided by the standard library that generates all numbers in sequence
+     * starting from one number and ending before another number.
+     * If we were to rewrite our countdown loop using for and Range, it'll look something like this:
+     */
+
+    for number in (1..4).rev() {
+        println!("{}!", number);
+    }
+
+    println!("LIFTOFF!");
+
+    /*
+     * Don't mind the .rev() method. That's an array method that reverses the values in an array, so [1, 2, 3] becomes [3, 2, 1].
+     * This code looks much cleaner than the while loop counter!
+     */
 }
