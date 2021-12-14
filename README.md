@@ -6,7 +6,7 @@ Welcome to my "Learning Rust" repo, a home for my notes as I'm learning [Rust](h
 
 To solidify your knowledge, some lessons also include challenges, which live in the `examples` directory. You can run the challenges by executing `cargo run --example [CHALLENGE_FILE_NAME]` without the `.rs` extension, for example `cargo run --example leap-year` if the challenge file is named `leap-year.rs`.
 
-I'm explaining the concepts with comments, followed by an example code block. All of the lessons are runabale, so you can clone this repo and play around with the examples. Make sure you pull from this repo from time to time to get the new lessons as I'm publishing them.
+I'm explaining the concepts with comments, followed by an example code block. All of the lessons are runable, so you can clone this repo and play around with the examples. Make sure you pull from this repo from time to time to get the new lessons as I'm publishing them.
 
 My main learning resource is [The Rust Programming Language Book](https://doc.rust-lang.org/book).
 
