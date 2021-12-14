@@ -23,11 +23,13 @@ fn main() {
      * - arch
      *
      * Each variant can be either Signed or Unsigned.
-     * Each signed variant can store numbers from -(2ⁿ⁻¹) to 2ⁿ⁻¹-1 inclusive, where "n" is the number of bits the variant uses.
-     * For example, the signed 8-bit can store numbers from -(2⁸⁻¹) to 2⁸⁻¹-1, or from -128 to 127.
      * Signed and Unsigned refer to whether it's possible for the number to be negative.
      * Signed integers can be negative (they can have a sign, a "minus").
      * Unsigned integers are always positive (we don't write +6, just 6).
+     * Each signed variant can store numbers from -(2ⁿ⁻¹) to 2ⁿ⁻¹-1 inclusive, where "n" is the number of bits the variant uses.
+     * For example, the signed 8-bit can store numbers from -(2⁸⁻¹) to 2⁸⁻¹-1, which equals -128 to 127.
+     * On the other hand, unsigned integers can store numbers from 0 to 2ⁿ-1, so an unsigned 8-bit integer can store numbers from
+     * 0 to 2⁸-1, which equals 0 to 255.
      */
     let x: u32 = 5;
     println!("x is an unsigned 32-bit integer with the value of {}", x);
