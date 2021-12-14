@@ -14,15 +14,17 @@ fn main() {
 
     // ========= INTEGERS =========
     /*
-     * An integer is a number without a fractional component. Integers come in six variants:
-     * - 8-bit
-     * - 16-bit
-     * - 32-bit
-     * - 64-bit
-     * - 128-bit
+     * An integer is a number without a fractional component. They come in six variants:
+     * - 8-bit (can hold 2⁸ -> 256)
+     * - 16-bit (can hold 2¹⁶ -> 65.536)
+     * - 32-bit (can hold 2³² -> 4.294.967.296)
+     * - 64-bit (can hold 2⁶⁴ -> 18.446.744.073.709.551.616 😅)
+     * - 128-bit (can hold 2¹²⁸ -> 340.282.366.920.938.463.463.374.607.431.768.211.460 😵‍💫)
      * - arch
      *
      * Each variant can be either Signed or Unsigned.
+     * Each signed variant can store numbers from -(2ⁿ⁻¹) to 2ⁿ⁻¹-1 inclusive, where "n" is the number of bits the variant uses.
+     * For example, the signed 8-bit can store numbers from -(2⁸⁻¹) to 2⁸⁻¹-1, or from -128 to 127.
      * Signed and Unsigned refer to whether it's possible for the number to be negative.
      * Signed integers can be negative (they can have a sign, a "minus").
      * Unsigned integers are always positive (we don't write +6, just 6).
@@ -95,9 +97,9 @@ fn main() {
 
     // ========= ARRAYS =========
     /*
-     * Arrays are another way to hold multiple values, but unlike the tup, all emenets must be of the same type.
+     * Arrays are another way to hold multiple values, but unlike the tuple, all elements must be of the same type.
      * Arrays in Rust also have a fixed length, just like the tuples.
-     * They are useful when ou want your data allocated on the stack rather than the heap,
+     * They are useful when you want your data allocated on the stack rather than the heap,
      * or when you want to ensure you always have a fixed number of elements.
      */
     let _nums = [1, 2, 3, 4, 5];

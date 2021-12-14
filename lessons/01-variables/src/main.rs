@@ -26,8 +26,7 @@ fn main() {
     let mut y = 5;
 
     /*
-     * The following command will work, because we're telling Rust that
-     * this variable can change its value.
+     * The following command will work, because we've already told Rust that the y variable can change its value.
      */
     y = y + 1;
 
