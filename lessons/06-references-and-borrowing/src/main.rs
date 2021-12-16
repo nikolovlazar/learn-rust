@@ -38,6 +38,7 @@ fn main() {
      *
      * What happens if we try to modify something we're borrowing? We can't! Just like variables are immutable
      * by default, references are immutable by default as well. Here's an example (that won't work) to prove it:
+     * P.S. You won't see the error in your IDE because of the other errors below, but it's there!
      */
 
     let digits = String::from("abc");
